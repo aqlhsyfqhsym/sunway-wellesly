@@ -122,8 +122,10 @@ a {
 
 
 .mw\-\[44\] {
-  max-width: 11rem;
+  max-width: 100%;
 }
+
+
 
 /* start custom section  */
 .custom-span {
@@ -233,8 +235,6 @@ a {
   cursor: zoom-in;
 }
 
-
-
 .zoom_image.zoom_mode_active {
   cursor: zoom-out;
 }
@@ -291,12 +291,9 @@ a {
 /* Start registration  */
 #registration {
   background-size: contain;
-  /* Background image size */
-  background-repeat: no-repeat;
-  /* Prevent repeating */
-  background-position: bottom;
-  /* Positioning background image */
-}
+   background-repeat: no-repeat;
+   background-position: bottom;
+ }
 
 .form-control:focus {
   box-shadow: none !important;
@@ -349,29 +346,14 @@ a {
   width: 50%;
 }
 
-/* .navbar-toggler{
-  border: none !important;
-} */
 .navbar-toggler:focus {
   box-shadow: none !important;
-}
-
-/* REMOVE SOON */
-#liveToastBtn {
-  position: fixed;
-  /* Fixed position to stay at the bottom right corner */
-  bottom: 1rem;
-  /* Distance from the bottom of the viewport */
-  right: 1rem;
-  /* Distance from the right side of the viewport */
-  z-index: 1050;
-  /* Ensure it is above other content, adjust if necessary */
 }
 
 @media screen and (min-width: 1024px) {
 
   .container-custom {
-    max-width: 1921px;
+    max-width: 1536px;
     margin: auto;
   }
 
@@ -384,6 +366,10 @@ a {
 }
 
 @media screen and (min-width: 768px) {
+
+  .mw\-\[44\] {
+    max-width: 11rem;
+  }
 
   .px\-\[20\] {
     padding-left: 15rem !important;
@@ -398,6 +384,15 @@ a {
 
 
 @media screen and (max-width: 768px) {
+
+  .slicker-mobile {
+    height: 55%;
+  }
+
+  .slick-track {
+    top: -95px !important;
+  }
+
   .w\-\[30px\] {
     width: 100% !important;
   }

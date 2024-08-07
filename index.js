@@ -1,8 +1,6 @@
-// Endpoint for form submission
+// Endpoint Prod for form submission
   const formEndpoint =
     "https://pms-integrate.sunwayproperty.com/api/web-wellesley/triggers/new/invoke?api-version=2022-05-01&sp=%2Ftriggers%2Fnew%2Frun&sv=1.0&sig=EhD-90gZi81_2Fa8UTV4CXnaoAy-759teYWa840d6c8";
-// const formEndpoint =
-//   "https://pms-integrate.sunwayproperty.com/api/global-test/triggers/new/invoke?api-version=2022-05-01&sp=%2Ftriggers%2Fnew%2Frun&sv=1.0&sig=2Tog_HqjDLVMFLx2dwry54BAx5ZdZRU0LUuoz7nsf5I";
 
 var timeoutID;
 var recaptchaSuccess = false;
@@ -1631,13 +1629,13 @@ $(document).ready(function () {
     }
 
     // for testing only - remove when reCAPTCHA is implemented
-    recaptchaSuccess = true;
+    // recaptchaSuccess = true;
 
     // Check if reCAPTCHA challenge is completed
-    // if (!recaptchaSuccess) {
-    //   alert("Please complete the reCAPTCHA challenge");
-    //   return;
-    // }
+    if (!recaptchaSuccess) {
+      alert("Please complete the reCAPTCHA challenge");
+      return;
+    }
 
     // Extract URL parameters
     const urlParams = getQueryParams(window.location.href);
@@ -1656,8 +1654,6 @@ $(document).ready(function () {
       utm_term: urlParams.utm_term || "",
       utm_content: urlParams.utm_content || "",
     };
-
-    console.log("ammar test payload:", formPayload);
 
     // Update the URL with the current payload parameters
     updateURLWithPayload(formPayload);
@@ -1766,24 +1762,3 @@ function onRecaptchaError() {
   $("#form-submit").prop("disabled", true);
   recaptchaSuccess = false;
 }
-
-
-  // Harith : Here is toast when user submit form
-  // document.addEventListener('DOMContentLoaded', () => {
-  //   const toastTrigger = document.getElementById('liveToastBtn');
-  //   const successNoti = document.getElementById('successnoti');
-  //   const submitNoti = document.getElementById('submitnoti');
-  
-  //   if (toastTrigger) {
-  //     const submitToast = new bootstrap.Toast(submitNoti, { delay: 2000 });
-  //     const successToast = new bootstrap.Toast(successNoti, { delay: 5000 });
-  
-  //     toastTrigger.addEventListener('click', () => {
-  //       submitToast.show();
-  //       setTimeout(() => {
-  //         successToast.show();
-  //       },2000);  
-  //     });
-  //   }
-  // });
-  
