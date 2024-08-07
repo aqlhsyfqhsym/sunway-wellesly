@@ -1631,13 +1631,13 @@ $(document).ready(function () {
     }
 
     // for testing only - remove when reCAPTCHA is implemented
-    // recaptchaSuccess = true;
+    recaptchaSuccess = true;
 
     // Check if reCAPTCHA challenge is completed
-    if (!recaptchaSuccess) {
-      alert("Please complete the reCAPTCHA challenge");
-      return;
-    }
+    // if (!recaptchaSuccess) {
+    //   alert("Please complete the reCAPTCHA challenge");
+    //   return;
+    // }
 
     // Extract URL parameters
     const urlParams = getQueryParams(window.location.href);
