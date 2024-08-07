@@ -372,8 +372,13 @@ a {
   }
 
   .px\-\[20\] {
-    padding-left: 15rem !important;
-    padding-right: 15rem !important;
+    padding-left: 14rem !important;
+    padding-right: 14rem !important;
+  }
+
+  .px\-\[10\] {
+    padding-left: 10rem !important;
+    padding-right: 10rem !important;
   }
 
   .w\-\[30px\] {
