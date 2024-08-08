@@ -91,15 +91,21 @@ a {
   position: relative;
 }
 
-.primary-heading {
+.primary-heading-slick {
   font-weight: 800;
   font-family: "Figtree", sans-serif;
 }
 
+.primary-heading   {
+  font-weight: 800;
+  font-family: "Figtree", sans-serif;
+}
+
+
 .slick-heading {}
 
 .sections {
-  padding: 48px 72px;
+  padding: 48px 72px 54px 72px;
   /* height: 100vh; */
 }
 
@@ -360,7 +366,9 @@ a {
     margin: 0px 150px !important;
   }
 
-  
+  .primary-heading-slick {
+    font-size:1.875rem !important; 
+  }
   .container-custom {
     max-width: 1536px;
     margin: auto;
