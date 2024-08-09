@@ -1539,6 +1539,7 @@ function showSuccessNotification() {
   successToast.show();
   setTimeout(() => {
     successToast.hide();
+    window.location.reload();
   }, 5000);
 }
 
@@ -1687,7 +1688,6 @@ $(document).ready(function () {
       .finally(() => {
         hideSubmittingNotification();
         $("#form-submit").prop("disabled", !recaptchaSuccess);
-        window.location.reload();
       });
   });
 
