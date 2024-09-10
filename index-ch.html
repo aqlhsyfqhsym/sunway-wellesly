@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en" class="scrollbar">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <title>Sunway Wellesly - Bukit Mertajam</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+
+  <!--CSS bootstrap CDN start here -->
+  <link rel="stylesheet" href="framework/bootstrap/css/bootstrap.css" type="text/css" media="screen" />
+  <!--SCRIPT bootstrap CDN start here -->
+  <script src="framework/bootstrap/js/bootstrap.js"></script>
+
+  <!-- AOS Animate -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- slick CDN/Folder -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="plugin/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="plugin/slick/slick-theme.css" />
+
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <script src="https://unpkg.com/libphonenumber-js@^1.7.6/bundle/libphonenumber-min.js"></script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BD6T08NW7B"></script>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag("js", new Date());
+
+    gtag("config", "G-BD6T08NW7B");
+  </script>
+
+  <script src="./index.js" defer></script>
+  <script src="./script.js" defer></script>
+</head>
+
+<header class="w-100 bg-[#2E565B] d-flex align-items-center justify-content-start h-[50px]">
+  <!-- Responsive Navbar for smaller screens -->
+  <nav class="navbar navbar-expand-lg d-lg-none bg-[#2E565B] w-100">
+    <div class="container-fluid d-flex align-items-stretch">
+      <!-- <a class="navbar-brand" href="#">  </a> -->
+      <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarNavmobile" aria-controls="navbarNavmobile" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon navbar-light-color"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavmobile">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="#" class="nav-link text-white text-white">首 页</a>
+          </li>
+          <li class="nav-item">
+            <a href="#master-plan" class="nav-link text-white">发展蓝图</a>
+          </li>
+          <li class="nav-item">
+            <a href="#features" class="nav-link text-white">设施特点</a>
+          </li>
+          <li class="nav-item">
+            <a href="#floor-plan" class="nav-link text-white">户型图 </a>
+          </li>
+          <li class="nav-item">
+            <a href="#gallery" class="nav-link text-white">项目图册 </a>
+          </li>
+          <li class="nav-item">
+            <a href="#location-map" class="nav-link text-white">项目位置</a>
+          </li>
+          <li class="nav-item">
+            <a href="#registration" class="nav-link text-white">注 册</a>
+          </li>
+          <li class="nav-item">
+            <a href="/360vr/index.html" class="nav-link text-white">
+              <img src="./assets/icons/Union.png" alt="Home Logo" class="img-fluid" style="width: 30px" />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <nav class="container-fluid d-none d-lg-block">
+    <ul class="d-flex justify-content-center align-items-center list-unstyled gap-[2px] my-0">
+      <li class="nav-item">
+        <a href="#" class="nav-link text-white text-uppercase text-decoration-none px-3">首 页</a>
+      </li>
+      <li class="nav-item">
+        <a href="#master-plan" class="nav-link text-white text-uppercase text-decoration-none px-3">发展蓝图</a>
+      </li>
+      <li class="nav-item">
+        <a href="#features" class="nav-link text-white text-uppercase text-decoration-none px-3">设施特点</a>
+      </li>
+      <li class="nav-item">
+        <a href="#floor-plan" class="nav-link text-white text-uppercase text-decoration-none px-3">户型图
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#gallery" class="nav-link text-white text-uppercase text-decoration-none px-3">项目图册
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#location-map" class="nav-link text-white text-uppercase text-decoration-none px-3">项目位置</a>
+      </li>
+      <li class="nav-item">
+        <a href="#registration" class="nav-link text-white text-uppercase text-decoration-none px-3">注 册</a>
+      </li>
+      <li class="nav-item">
+        <a href="360vr/360VR.html" class="nav-link text-decoration-none px-3" target="_blank">
+          <img src="./assets/icons/Union.png" alt="Home Logo" class="img-fluid" />
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<body class="container-custom">
+  <!-- SECTION 1 -->
+  <section class="px-0 pt-0 pb-0">
+    <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./assets/banner/landing-img1.svg" class="object-cover w-100 h-100 object-top" alt="..." />
+          <h1
+            class="position-absolute fixed-bottom text-white w-100 text-center primary-heading ms-4 p-md-4 p-3 pb-2 pb-md-5"
+            data-aos="fade-down" data-aos-anchor-placement="top-bottom">
+            欢迎回到静谧宜居的家园
+          </h1>
+        </div>
+        <div class="carousel-item">
+          <img src="./assets/banner/landing-img2.svg" class="object-cover w-100 h-100 object-top" alt="..." />
+        </div>
+        <div class="carousel-item">
+          <img src="./assets/banner/landing-img3.svg" class="object-cover w-100 h-100 object-top" alt="..." />
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="custom-span">
+          <svg width="16" height="18" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.695314 15.0001L25.1518 29.1201L25.1518 0.880166L0.695314 15.0001Z" fill="white" />
+          </svg>
+        </span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="custom-span">
+          <svg width="16" height="18" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M25.3047 15.0001L0.848164 29.1201L0.848167 0.880166L25.3047 15.0001Z" fill="white" />
+          </svg>
+        </span>
+      </button>
+    </div>
+  </section>
+
+  <!-- SECTION 2 -->
+  <section class="sections d-flex flex-column gap-4" id="master-plan">
+    <h1 class="text-[#2A565A] text-center primary-heading" data-aos="fade-down" data-aos-anchor-placement="top-bottom">
+      缔造更卓越宏伟的愿景
+    </h1>
+    <p class="text-dark px-[10] text-center fw-normal" data-aos="fade-up">
+      我 们 精 心 规 划 的 发 展 蓝 图，正 展 现 出 充 满 活 力 的 绚 丽 景 象
+      。欢 迎 加 入 我 们 繁 荣 昌 盛 的 社 区，在 这 里，每 个 区 域 都 独 具
+      特 色 、相 辅 相 成，共 同 营 造 和 谐 舒 适 的 环境，为 您 带 来 现 代
+      化 、便 利 且 温 馨 的 生 活 体 验 。
+    </p>
+
+    <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-5 pb-md-1">
+      <div class="image-container" data-aos="fade-right">
+        <img class="masterplan-base" src="./assets/masterplan/map-base.svg" alt="Masterplan Base Image" />
+        <div class="overlay">
+          <img class="masterplan-hover" src="./assets/masterplan/map-hover.svg" alt="Masterplan Hover Image" />
+        </div>
+      </div>
+
+      <div class="d-flex flex-column gap-3">
+        <img src="./assets/masterplan/legend-1.svg" alt="" data-aos="fade-left" />
+        <a href="#serene-villas" class="" aria-label="View more">
+          <img src="./assets/masterplan/legend-4.svg" alt="" data-aos="fade-left" />
+        </a>
+        <img src="./assets/masterplan/legend-2.svg" alt="" data-aos="fade-left" />
+        <img src="./assets/masterplan/legend-3.svg" alt="" data-aos="fade-left" />
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3 -->
+  <section class="sections bg-[#9ECEBF] d-flex flex-column gap-4" id="features">
+    <h1 class="text-[#2A565A] text-center primary-heading" data-aos="fade-down" data-aos-anchor-placement="top-bottom">
+      丰富多彩的生活格调
+    </h1>
+    <p class="text-center px-[10] fw-normal text-[#365E5D]" data-aos="fade-up">
+      步入Sunway Wellesley Serene Villas，开启 非凡 的 生 活 体 验 ⸺ 这 是 一
+      个 精 心 设 计 的 社 区，融 合了都 市人 所 需 的 现 代 配 备， 重 新 定
+      义 您 的日常 生 活，尽 享 现 代 居 住 的 舒 适 与 便 利 。
+    </p>
+    <div class="container d-flex flex-column gap-4 p-0">
+      <div class="row d-flex justify-content-center flex-wrap m-[150px] gap-md-1 pb-md-1" data-aos="fade-down">
+        <div class="col-custom grid-item text-center p-0">
+          <div class="h-[100px] d-flex align-items-end justify-content-center">
+            <img src="./assets/features/ETS.svg" alt="" />
+          </div>
+          <p class="lifestyle-heading text-[#365E5D] text-center">
+            临 近ETS火车站及<br />
+            规划中的轻轨线路
+          </p>
+        </div>
+        <div class="col-custom grid-item text-center p-0">
+          <div class="h-[100px] d-flex align-items-end justify-content-center">
+            <img src="./assets/features/guard.svg" alt="" />
+          </div>
+          <p class="lifestyle-heading text-[#365E5D] text-center">
+            设有围篱
+            <br />
+            和保安设施
+          </p>
+        </div>
+        <div class="col-custom grid-item text-center p-0">
+          <div class="h-[100px] d-flex align-items-end justify-content-center">
+            <img src="./assets/features/clubhouse.svg" alt="" />
+          </div>
+          <p class="lifestyle-heading text-[#365E5D] text-center">
+            附泳池和健身房 <br />
+            的休闲会所
+          </p>
+        </div>
+        <div class="col-custom grid-item text-center p-0">
+          <div class="h-[100px] d-flex align-items-end justify-content-center">
+            <img src="./assets/features/court.svg" alt="" />
+          </div>
+          <p class="lifestyle-heading text-[#365E5D] text-center">
+            篮球场及<br />
+            户外健身区
+          </p>
+        </div>
+        <div class="col-custom grid-item text-center p-0">
+          <div class="h-[100px] d-flex align-items-end justify-content-center">
+            <img src="./assets/features/landscape.svg" alt="" />
+          </div>
+          <p class="lifestyle-heading text-[#365E5D] text-center">
+            绿意盎然的氛围
+            <br />
+            和林荫跑道
+          </p>
+        </div>
+        <div class="col-custom grid-item text-center p-0">
+          <div class="h-[100px] d-flex align-items-end justify-content-center">
+            <img src="./assets/features/cctv.svg" alt="" />
+          </div>
+          <p class="lifestyle-heading text-[#365E5D] text-center">
+            设 有CCTV监控和 <br />
+            7英尺高围墙
+          </p>
+        </div>
+        <div class="col-custom grid-item text-center p-0">
+          <div class="h-[100px] d-flex align-items-end justify-content-center">
+            <img src="./assets/features/walkway.svg" alt="" />
+          </div>
+          <p class="lifestyle-heading text-[#365E5D] text-center">
+            40英尺宽的小区<br />
+            道路及行人道
+          </p>
+        </div>
+        <div class="col-custom grid-item text-center p-0">
+          <div class="h-[100px] d-flex align-items-end justify-content-center">
+            <img src="./assets/features/drainage.svg" alt="" />
+          </div>
+          <p class="lifestyle-heading text-[#365E5D] text-center">
+            隐蔽式排水系统<br />
+            与地下电缆铺设
+          </p>
+        </div>
+        <div class="col-custom grid-item text-center p-0">
+          <div class="h-[100px] d-flex align-items-end justify-content-center">
+            <img src="./assets/features/doorstep.svg" alt="" />
+          </div>
+          <p class="lifestyle-heading text-[#365E5D] text-center">
+            2至4个<br />
+            门前停车位
+          </p>
+        </div>
+        <div class="col-custom grid-item text-center p-0">
+          <div class="h-[100px] d-flex align-items-end justify-content-center">
+            <img src="./assets/features/EV.svg" alt="" />
+          </div>
+          <p class="lifestyle-heading text-[#365E5D] text-center">
+            配备电动汽车<br />
+            充电桩基础设施
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4 -->
+  <section class="sections bg-[#E1EDEA] d-flex flex-column gap-4 align-items-center" id="video">
+    <h1 class="text-[#2A565A] text-center primary-heading" data-aos="fade-down" data-aos-anchor-placement="top-bottom">
+      探索非凡的生活体验
+    </h1>
+
+    <video class="rounded-4 pb-md-2 custom-width-50" controls data-aos="zoom-in" data-aos-anchor-placement="top-center">
+      <source src="./assets/video/Sunway_Wellesley_Serene Villas_Welcome_Home_To_Serenity.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </section>
+
+  <!-- SECTION 5 -->
+  <section class="sections bg-[#2E565B] d-flex flex-column gap-4" id="serene-villas">
+    <h1 class="text-white text-center primary-heading" data-aos="fade-down" data-aos-anchor-placement="top-bottom">
+      精 心 规 划，臻 于 完 美
+    </h1>
+    <p class="text-center px-[10] fw-normal text-white" data-aos="fade-up">
+      沉浸在大自然中的Sunway Wellesley Serene Villas，绿 意 盎 然 、绿 树 成
+      荫，让 您 享 尽 美 景与宁 静 。 <br />
+      多 样 化 的 运 动 和 休 闲 设 施 让 户外 时 光 与居 家 生 活 一 样 充 满
+      乐 趣，内 外皆 是 温 馨 惬 意 。
+    </p>
+    <div class="d-flex flex-md-row flex-column custom-padding gap-4 pb-md-2 justify-content-center" controls
+      data-aos="zoom-in">
+      <div class="zoom_image w-100">
+        <img class="rounded-4" src="./assets/siteplan/site-plan.png" alt="" />
+      </div>
+      <div class="bg-[#D6EDE7] rounded-4">
+        <img src="./assets/siteplan/map-legend.png" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6 -->
+  <section class="sections position-relative d-flex flex-column gap-4 align-items-center" id="floor-plan">
+    <img src="./assets/canvas/right-top.png" alt="" aria-hidden="true"
+      class="position-absolute top-0 end-0 z-3 d-none d-md-block" />
+    <img src="./assets/canvas/bottom-low.png" alt="" aria-hidden="true"
+      class="position-absolute bottom-0 start-0 z-3 d-none d-md-block" />
+
+    <div id="carouselExampleFade" class="carousel slide carousel-fade w-100">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <h1 class="text-[#2A565A] text-center primary-heading mb-4 slick-heading">
+            Intermediate / End Unit (Lower)
+          </h1>
+          <img class="d-block w-100" src="./assets/floorplan/mobile/intermediate-unit-lower.png" alt="Third slide" />
+        </div>
+        <div class="carousel-item">
+          <h1 class="text-[#2A565A] text-center primary-heading mb-4">
+            Intermediate / End Unit (Upper)
+          </h1>
+
+          <img class="d-block w-100" src="./assets/floorplan/mobile/intermediate-unit-upper.png" alt="Third slide" />
+        </div>
+        <div class="carousel-item">
+          <h1 class="text-[#2A565A] text-center primary-heading mb-4">
+            Corner Unit (Lower)
+          </h1>
+
+          <img class="d-block w-100" src="./assets/floorplan/mobile/corner-unit-lower.png" alt="First slide" />
+        </div>
+        <div class="carousel-item">
+          <h1 class="text-[#2A565A] text-center primary-heading mb-4">
+            Corner Unit (Upper)
+          </h1>
+
+          <img class="d-block w-100" src="./assets/floorplan/mobile/corner-unit-upper.png" alt="Second slide" />
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+        <span class="custom-span-orange">
+          <svg width="16" height="18" viewBox="0 0 24 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.238281 14.4999L23.8796 0.850556L23.8796 28.1492L0.238281 14.4999Z" fill="#F57921" />
+          </svg>
+        </span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+        <span class="custom-span-orange">
+          <svg width="16" height="18" viewBox="0 0 26 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M25.3047 14.5001L0.848164 28.6201L0.848167 0.380166L25.3047 14.5001Z" fill="#F57921" />
+          </svg>
+        </span>
+      </button>
+    </div>
+
+    <a rel="noopener noreferrer" href="./assets/download/Sunway_Wellesley-Serene-Villas.pdf"
+      download="Sunway_Wellesley-Serene-Villas.pdf">
+      <button target="_blank" type="button" onclick="downloadPDF()"
+        class="btn-custom-orange rounded-5 btn-lg px-4 py-3 fs-5">
+        下载电子小册
+      </button>
+    </a>
+  </section>
+
+  <!-- SECTION 7 -->
+  <section class="sections bg-[#2E565B] d-flex flex-column gap-4" id="gallery">
+    <div class="row p-md-2" data-aos="zoom-in">
+      <div class="col-lg-4 col-12">
+        <div class="content-slider content-slider-mobile">
+          <div class="content active p-3 p-md-5 ps-md-2 pe-md-1">
+            <h2 class="text-white text-left fw-bold primary-heading-slick mb-2 pe-md-1">
+              围篱式社区
+            </h2>
+            <p class="text-white fw-normal fs-5 pe-md-5">
+              欢迎来到 Sunway Wellesley - <br />
+              开启全新篇章， 体验重新定义并提升的绿色宜居社区精髓，
+              让您尽享优质生活。
+            </p>
+          </div>
+
+          <div class="content p-3 p-md-5 ps-md-2 pe-md-1">
+            <h2 class="text-white text-left fw-bold primary-heading-slick mb-2 pe-md-1">
+              多样化建筑外型设计
+            </h2>
+            <p class="text-white fw-normal fs-5 pe-md-5">
+              在 热 带 雨 林 环境 中，多 样 化 的 现 代 建 筑 外
+              观 与 大自 然 融 为 一 体，营 造 出 轻 松 宜 人 的
+              生 活 氛 围，让 每 次 归 家 都 是 一 种 享 受 。
+            </p>
+          </div>
+
+          <div class="content p-3 p-md-5 ps-md-2 pe-md-1">
+            <h2 class="text-white text-left fw-bold primary-heading-slick mb-2 pe-md-1">
+              绿径花园
+            </h2>
+            <p class="text-white fw-normal fs-5 pe-md-5">
+              花 草点 缀 所 带 来 的 宁 静 与 舒 适，将生 活 空 间
+              与 大自 然 重 叠，享 受 每 一 刻 的 悠 然 时 光 。
+            </p>
+          </div>
+
+          <div class="content p-3 p-md-5 ps-md-2 pe-md-1">
+            <h2 class="text-white text-left fw-bold primary-heading-slick mb-2 pe-md-1">
+              绿荫大道
+            </h2>
+
+            <p class="text-white fw-normal fs-5 pe-md-5">
+              蜿蜒的小径穿梭于林荫间的步道，
+              为归家的心增添多一份的温馨。
+            </p>
+          </div>
+
+          <div class="content p-3 p-md-5 ps-md-2 pe-md-1">
+            <h2 class="text-white text-left fw-bold primary-heading-slick mb-2 pe-md-1">
+              休闲会所
+            </h2>
+
+            <p class="text-white fw-normal fs-5 pe-md-5">
+              惬 意 的 俱 乐 部 环境，是 您 和 您 亲 爱 的 人
+              放松嬉水的好去处。
+            </p>
+          </div>
+
+          <div class="content p-3 p-md-5 ps-md-2 pe-md-1">
+            <h2 class="text-white text-left fw-bold primary-heading-slick mb-2 pe-md-1">
+              儿童游乐场
+            </h2>
+
+            <p class="text-white fw-normal fs-5 pe-md-5">
+              畅 享 生 活 、轻 松 玩 乐 及尽情 欢 笑，您 所 需
+的 休 闲 设 施 都 近 在 咫 尺，步 行 即 可 到 达 。
+            </p>
+          </div>
+          <div class="content p-3 p-md-5 ps-md-2 pe-md-1">
+            <h2 class="text-white text-left fw-bold primary-heading-slick pe-md-1">
+              中间单位（底层）
+            </h2>
+            <h4 class="text-white font-light mb-2">客厅与餐厅</h4>
+
+            <p class="text-white fw-normal fs-5 pe-md-5">
+              以 流 动 性 为主 的 设 计，舒 适 的 居 住 环境 亦
+              设有采光充足的房间。
+            </p>
+          </div>
+
+          <div class="content p-3 p-md-5 ps-md-2 pe-md-1">
+            <h2 class="text-white text-left fw-bold primary-heading-slick mb-2 pe-md-1">
+              中间单位（底层）
+            </h2>
+            <h4 class="text-white font-light mb-2">主卧室</h4>
+
+            <p class="text-white fw-normal fs-5 pe-md-5">
+              宽敞宜人，Sunway Wellesley 以其优雅、
+              舒适与独特魅力的格局引以为傲。
+            </p>
+          </div>
+
+          <div class="content p-3 p-md-5 ps-md-2 pe-md-1">
+            <h2 class="text-white text-left fw-bold primary-heading-slick pe-md-1">
+              中间单位（上层）
+            </h2>
+            <h4 class="text-white font-light mb-2">客厅与餐厅</h4>
+
+            <p class="text-white fw-normal fs-5 pe-md-5">
+              精心设计的公共区域旨在让家人们相聚，
+              一起享受天伦之乐！
+            </p>
+          </div>
+
+          <div class="content p-3 p-md-5 ps-md-2 pe-md-1">
+            <h2 class="text-white text-left fw-bold primary-heading-slick pe-md-1">
+              中间单位（上层）
+            </h2>
+            <h4 class="text-white font-light mb-2">卧室与阳台</h4>
+
+            <p class="text-white fw-normal fs-5 pe-md-5">
+              走 进 温 馨 的 阳台，既 能 欣 赏 映 入 眼 帘 的 大自
+然 风 景，亦 能 与家 人一 起 留 下 美 好 回 忆 。
+            </p>
+          </div>
+          <div class="content p-3 p-md-5 ps-md-2 pe-md-1">
+            <h2 class="text-white text-left fw-bold primary-heading-slick pe-md-1">
+              角头单位（底层）
+            </h2>
+            <h4 class="text-white font-light mb-2">客厅与餐厅</h4>
+
+            <p class="text-white fw-normal fs-5 pe-md-5">
+              在这宽敞的奢华空间享受轻松美好时刻，
+              内心总能找到愉悦。
+            </p>
+          </div>
+          <div class="content p-3 p-md-5 ps-md-2 pe-md-1">
+            <h2 class="text-white text-left fw-bold primary-heading-slick pe-md-1">
+              角头单位（上层）
+            </h2>
+            <h4 class="text-white font-light mb-2">客厅与餐厅</h4>
+
+            <p class="text-white fw-normal fs-5 pe-md-5">
+              一个供家人团聚和享受的空间。
+              为美好生活干杯。
+            </p>
+          </div>
+
+          <div class="content p-3 p-md-5 ps-md-2 pe-md-1">
+            <h2 class="text-white text-left fw-bold primary-heading-slick pe-md-1">
+              角头单位（上层）
+            </h2>
+            <h4 class="text-white font-light mb-2">阳台与休闲区</h4>
+
+            <p class="text-white fw-normal fs-5 pe-md-5">
+              创新规划意味着您的生活空间将有全新
+的 体 验 。尽情 享 受 吧！
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-8 col-12">
+        <div class="text-white bg-[gradient] bg-opacity-75 slicker-mobile rounded-4">
+          <div class="center slider">
+            <div>
+              <img src="./assets/slick/1.png" class="block img-mobile rounded-4" alt="..." />
+            </div>
+            <div>
+              <img src="./assets/slick/2.png" class="img-mobile rounded-4 block" alt="..." />
+            </div>
+            <div>
+              <img src="./assets/slick/3.png" class="img-mobile rounded-4 block" alt="..." />
+            </div>
+            <div>
+              <img alt="" src="./assets/slick/4.png" class="img-mobile rounded-4 block" alt="..." />
+            </div>
+            <div>
+              <img alt="" src="./assets/slick/5.png" class="img-mobile rounded-4 block" alt="..." />
+            </div>
+            <div>
+              <img alt="" src="./assets/slick/6.png" class="img-mobile rounded-4 block" alt="..." />
+            </div>
+            <div>
+              <img alt="" src="./assets/slick/7.png " class="rounded-4 img-mobile block" alt="..." />
+            </div>
+            <div>
+              <img alt="" src="./assets/slick/8.png" class="rounded-4 img-mobile block" alt="..." />
+            </div>
+            <div>
+              <img alt="" src="./assets/slick/9.png" class="rounded-4 img-mobile block" alt="..." />
+            </div>
+            <div>
+              <img alt="" src="./assets/slick/10.png" class="rounded-4 img-mobile block" alt="..." />
+            </div>
+            <div>
+              <img alt="" src="./assets/slick/11.png" class="rounded-4 img-mobile block" alt="..." />
+            </div>
+            <div>
+              <img alt="" src="./assets/slick/12.png" class="rounded-4 img-mobile block" alt="..." />
+            </div>
+            <div>
+              <img alt="" src="./assets/slick/13.png" class="rounded-4 img-mobile block" alt="..." />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 8 -->
+  <section class="sections position-relative d-flex flex-column gap-4 align-items-center" id="location-map">
+    <img src="./assets/zoomed-map/leaf-corner.png" alt="" aria-hidden="true" class="position-absolute top-0 start-0" />
+    <img src="./assets/zoomed-map/leaf-corner.png" alt="" aria-hidden="true" class="position-absolute bottom-0 end-0"
+      style="transform: rotate(180deg)" />
+    <h1 class="text-[#2A565A] text-center primary-heading">
+      理 想 生 活，由 此 开启
+    </h1>
+    <img class="w-75" src="./assets/zoomed-map/zoomed-map.svg" alt="" />
+
+    <div class="w-75 d-flex flex-column gap-4">
+      <div class="d-flex flex-column gap-4 gap-md-0 flex-md-row justify-content-between align-items-center">
+        <img src="./assets/zoomed-map/zoomed-map-legend.png" alt="" class="h-100 w-[30px]" />
+        <a href="https://www.google.com/maps/place/Sunway+Wellesley+Serene+Villas/@5.3736021,100.4566228,3924m/data=!3m1!1e3!4m6!3m5!1s0x304ac90054bd38d5:0x8e3d5e0f3e9a6873!8m2!3d5.3736021!4d100.4566228!16s/g/11y3wf46qx?entry=ttu"
+          target="_blank" rel="noopener noreferrer" style="z-index: 10">
+          <button type="button" class="btn-custom-orange rounded-5 btn-lg px-4 py-3 fs-5">
+            <svg width="29" height="28" viewBox="0 0 29 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_700_4156)">
+                <circle cx="10.7573" cy="10.1899" r="8.49558" fill="white" />
+                <path
+                  d="M27.6553 23.3234L22.882 18.5501C22.8819 18.55 22.8819 18.55 22.8817 18.5498C22.8815 18.5497 22.8815 18.5497 22.8814 18.5495L21.1751 16.8432C20.5987 16.2668 19.6607 16.2666 19.0841 16.8432L18.8749 17.0524L18.1543 16.3318C19.566 14.6391 20.4167 12.463 20.4167 10.0918C20.4165 4.71189 16.0396 0.334961 10.6596 0.334961C5.27965 0.334961 0.902832 4.71189 0.902832 10.0918C0.902832 15.4718 5.27965 19.8487 10.6596 19.8487C13.0309 19.8487 15.207 18.9981 16.8996 17.5864L17.6202 18.3069L17.411 18.5161C16.8347 19.0926 16.8347 20.0306 17.4111 20.6072L23.8912 27.0873C24.469 27.6652 25.4045 27.6654 25.9824 27.0874L27.6553 25.4145C28.2318 24.838 28.2318 23.9 27.6553 23.3234ZM10.6596 18.0743C6.25808 18.0743 2.67713 14.4934 2.67713 10.0918C2.67713 5.69026 6.25808 2.10932 10.6596 2.10932C15.0612 2.10932 18.6422 5.69026 18.6422 10.0918C18.6422 14.4934 15.0612 18.0743 10.6596 18.0743ZM18.8749 19.5617L20.1295 18.3071L20.9997 19.1772L19.745 20.4319L18.8749 19.5617ZM24.9368 25.6236L20.9997 21.6864L22.2543 20.4318L26.1915 24.369L24.9368 25.6236Z"
+                  fill="black" />
+                <path
+                  d="M10.6594 3.88354C10.1694 3.88354 9.77222 4.28077 9.77222 4.77075C9.77222 5.26073 10.1694 5.65795 10.6594 5.65795C13.1043 5.65795 15.0933 7.64682 15.0933 10.0916C15.0933 10.5816 15.4905 10.9788 15.9805 10.9788C16.4705 10.9788 16.8677 10.5816 16.8677 10.0916C16.8677 6.66845 14.0827 3.88354 10.6594 3.88354Z"
+                  fill="black" />
+              </g>
+              <defs>
+                <clipPath id="clip0_700_4156">
+                  <rect width="27.1859" height="27.1859" fill="white" transform="translate(0.902588 0.334961)" />
+                </clipPath>
+              </defs>
+            </svg>
+            谷歌地图
+          </button>
+        </a>
+      </div>
+      <p class="w-100 custom-font">
+        资料来源：
+        <span class="fst-italic fw-bold">Penang Infrastructure Corporation（截至 2024 年 7 月）</span>
+        <br />
+        此 处 提 及 的 拟 建 轻 轨 路 线 信 息 来自 政 府 网 站 等 公 开 管 道，并 展 示了相 关 部 门 在 槟 城 交 通 大 蓝 图 中 所 列 出 的 内 容 。
+      </p>
+    </div>
+  </section>
+
+  <!-- SECTION 9 -->
+  <section class="sections d-flex flex-column gap-4 align-items-center background-section">
+    <img alt="" src="./assets/perks/sunway_logo.png" />
+    <p class="text-dark text-center px-[20] fw-semibold custom-width-70 fs-5">
+      一个专为双威产业项目业主所打造的全方位社区体验。
+      无 论 是 买 家、转 售业 主 还 是 租 户，每 一 个人都 能 享 受 这 为 您 量 身 定 做 的 体 验
+    </p>
+
+    <div class="row px-5">
+      <div class="col-md-4 d-flex flex-column gap-4 align-items-center">
+        <div class="h-[100px]">
+          <img alt="" src="./assets/perks/rent.svg" />
+        </div>
+        <div>
+          <img alt="" src="./assets/perks/rent-text.svg" />
+        </div>
+        <p class="fs-4 text-center">
+          独家优惠 <br/>
+          <span class="fw-bold me-1">Rent+</span> <br/>
+          25% 租金抵扣计划
+         </p>
+      </div>
+
+      <div class="col-md-4 d-flex flex-column gap-4 align-items-center">
+        <div class="h-[100px]">
+          <img alt="" src="./assets/perks/care.svg" />
+        </div>
+        <div>
+          <img alt="" src="./assets/perks/care-text.svg" />
+        </div>
+        <p class="fs-4 text-center">
+          无限便利<br/>
+          <span class="fw-bold me-1">Care+</span> <br/>
+          家居护理和管理服务
+         </p>
+      </div>
+
+      <div class="col-md-4 d-flex flex-column gap-4 align-items-center">
+        <div class="h-[100px]">
+          <img alt="" src="./assets/perks/reward.svg" />
+        </div>
+        <div>
+          <img alt="" src="./assets/perks/reward-text.svg" />
+        </div>
+        <p class="fs-4 text-center">
+          享受福利<br/>
+          <span class="fw-bold me-1">Reward+</span> <br/>
+          购房回扣和奖励
+         </p>
+      </div>
+    </div>
+
+    <a href="https://propertyplus.sunwayproperty.com/" target="_blank" rel="noopener noreferrer">
+      <button type="button" class="btn-custom-orange rounded-5 btn-lg px-4 py-3 fs-5">
+        了解更多
+      </button>
+    </a>
+  </section>
+
+  <!-- SECTION 10 -->
+  <section id="registration"
+    class="sections d-flex flex-column align-items-center bg-[#EEC173] bg-[url(assets/enquiries/leaf-bg.png)] bg-contain bg-no-repeat bg-bottom">
+    <h1 class="text-[#2A565A] text-center primary-heading">注 册</h1>
+
+    <form id="enquiry-form"
+      class="d-flex flex-column justify-content-start align-items-stretch gap-4 font-montserrat w-[80px]">
+      <div class="d-flex flex-column justify-content-start align-items-start gap-2">
+        <label for="fullname" class="text-[#2A565A]">姓名 *</label>
+
+        <input type="text" name="fullname" id="fullname" placeholder="John Doe" aria-required="true"
+          class="form-control border-2 rounded p-2" />
+        <span id="fullname-error" class="text-danger fs-6"></span>
+      </div>
+      <div class="d-flex flex-column justify-content-start align-items-start gap-2">
+        <label for="email" class="text-[#2A565A]">电邮地址 *</label>
+        <input type="email" name="email" id="email" aria-required="true" autocomplete="email"
+          placeholder="name@example.com" class="form-control border-2 rounded p-2" />
+        <span id="email-error" class="text-danger fs-6"></span>
+      </div>
+      <div class="d-flex flex-column justify-content-start align-items-start gap-2 position-relative">
+        <label for="mobile" class="text-[#2A565A]">手机号码 *</label>
+        <div class="d-flex flex-column flex-md-row gap-2 justify-content-start align-items-center w-100">
+          <select name="country-code" id="country-code" aria-required="true" aria-label="Default select example"
+            class="mw-[44] form-select border-2 rounded p-2" style="padding-right: 0px !important"></select>
+
+          <input type="tel" name="mobile" id="mobile" aria-required="true" autocomplete="tel" placeholder="1234567890"
+            class="w-100 form-control border-2 rounded p-2" />
+        </div>
+        <span id="phone-error" class="text-danger fs-6"></span>
+      </div>
+
+      <div class="d-flex flex-row justify-conent-start align-items-start gap-2">
+        <input type="checkbox" name="terms" id="terms" required aria-required="true"
+          class="form-check-input aspect-square text-[#2A565A] border-2 border-transparent rounded focus:border-[#2A565A] focus:ring-0 focus:outline-none focus:outline-transparent" />
+        <label for="terms" class="text-[#2A565A] custom-font font-figtree">
+          双威产业
+          <br />
+          我 已 满 � � 岁。我 已 阅 读 并 同 意 条
+          <a target="_blank" href="https://www.sunwayproperty.com/terms-and-conditions"
+            class="text-decoration-underline text-[#2A565A] hover:text-primary link-underline-opacity-100-hover"> 款 和 条 件</a> 。
+          <br />
+          <br />
+          我 已 阅 读 您 《 2010 年 个人 资 料 保 护 法 》下 所 制 定 的《个人 资 料 保 护 通 知 》( "<a target="_blank"
+            href=" https://www.sunwayproperty.com/terms-and-conditions/privacy-notice"
+            class="text-decoration-underline text-[#2A565A] hover:text-primary link-underline-opacity-100-hover">
+            隐 私 声 明 </a>")".
+          <br />
+          <br />
+          我 同 意 根 据 个人 资 料 保 护 法 和 本 表 格 , 处 理 我 的 个人 资 料（包 括 敏 感 的 个人 资 料）。
+          <br />
+          <br />
+          我 在 此 表 格 中 所 提 供 的 个人 资 料, 我 已 确 认该 人已 阅 读了《 隐 私 声 明 》, 并且 :
+          <br />
+          <br />
+          (1) 他 / 她 已 同 意 隐 私 声 明 和 此 表 格；或 者
+          <br />
+          (2) 我拥有代表该人提供同意的法律权限(只适用于未满 18 岁或法律上已定意为无能力提供同意)。
+          <br />
+          <br />
+          此 表 格 中 的 个人 资 料可 被 S u n w a y 实 体 用 于 销 售 和 市 场 营 销 您 的 产 品 和 服 务 。
+          <br />
+          <br />
+          " 销 售 和 市 场 营 销 "是 指 进 行 数 据 分 析，并 向 您 发 送 市 场 营 销 和 促 销 资 料 。
+          <br />
+          "Sunway" 实体是指在隐私声明中声明为 Sunway 实体的实体。
+        </label>
+      </div>
+      <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-4 mt-md-5">
+        <!-- reCAPTCHA Element -->
+        <!-- Please replace data-sitekey with your own sitekey -->
+        <div class="g-recaptcha" data-sitekey="6LfR6SAqAAAAAPa1uaxjflOAf8yINLGhShuSNv-9"
+          data-callback="onRecaptchaSuccess" data-expired-callback="onRecaptchaResponseExpiry"
+          data-error-callback="onRecaptchaError"></div>
+        <button id="form-submit" type="submit" class="btn btn-secondary py-3 rounded-pill fs-5 px-5 transition-all">
+          提 交
+        </button>
+      </div>
+    </form>
+  </section>
+
+  <!-- SECTION 11  -->
+  <section class="sections pb-0 d-flex flex-column gap-4 align-items-center">
+    <h2 class="text-[#6D6F72] text-center fw-medium text-uppercase primary-heading font-montserrat">
+      点击下方以联系我们
+    </h2>
+
+    <div class="d-flex flex-row gap-5 justify-content-center align-items-center">
+      <a target="_blank"
+        class="d-flex font-montserrat text-[#262261] fw-bold flex-column justify-content-start align-items-center cursor-pointer link-offset-2 link-underline link-underline-opacity-0"
+        href="https://wa.me/60125522978?text=Hi%20Jacky,%20I'd%20like%20to%20know%20more%20about%20Sunway%20Wellesley.">
+        <div class="d-flex flex-row justify-content-center align-items-center gap-2">
+          <p class="contact mb-0">Jacky</p>
+          <img src="./assets/contact/whatsapp_logo.png" alt="" class="contact-icon" />
+        </div>
+        <p class="contact">012-552 2978</p>
+      </a>
+      <a target="_blank"
+        class="d-flex font-montserrat text-[#262261] fw-bold flex-column justify-content-start align-items-center cursor-pointer link-offset-2 link-underline link-underline-opacity-0"
+        href="https://wa.me/601151573139?text=Hi%20Li%20Siah,%20I'd%20like%20to%20know%20more%20about%20Sunway%20Wellesley.">
+        <div class="d-flex flex-row justify-content-center align-items-center gap-2">
+          <p class="contact mb-0">Li Siah</p>
+          <img src="./assets/contact/whatsapp_logo.png" alt="" class="contact-icon" />
+        </div>
+        <p class="contact">011-5157 3139</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="sections pt-1">
+    <div class="d-flex flex-column flex-md-row gap-5 justify-content-between align-items-center align-items-md-end">
+      <div>
+        <p class="text-[#808080] text-left mb-0">
+          Sunway Bintang Sdn Bhd (199201007071)
+          <br />
+          28, Jalan Anson, 10400 George Town, Penang
+        </p>
+      </div>
+      <div
+        class="d-flex flex-row gap-2 align-items-center/Users/aqilahsyafiqah/Sites/SW-web/assets/landing/landing-img3.svg">
+        <a target="_blank" href="https://www.sunwayproperty.com/">
+          <img src="./assets/footer/developer-icon.png" alt="Sunway Property" />
+        </a>
+        <a target="_blank" href="https://www.facebook.com/SunwayPenangOfficial/">
+          <img src="./assets/footer/facebook-icon.png" alt="Sunway Penang Official Facebook Page" />
+        </a>
+        <a target="_blank" href="https://www.instagram.com/sunwaypenang/">
+          <img src="./assets/footer/instagram-icon.png" alt="Instagram Icon" />
+        </a>
+      </div>
+    </div>
+    <hr class="border-[#2A565A]" />
+    <div class="text-[#808080] custom-font">
+      <p>
+        Sunway Bintang Sdn Bhd (238575-M) ● No. 28, Jalan Anson, 10400 George
+        Town, Penang ● Developer’s License No.: 13389/02-2028/0059(R) ●
+        Validity Period: 25/02/2019 - 24/02/2028 ● Advertising and Sales
+        Permit No.: 13389-2/07-2027/0664(N)-(S) ● Validity Period: 23/07/2024
+        - 22/07/2027 ● Approving Authority: Majlis Bandaraya Seberang Perai ●
+        Building Plan Approval No.: MBSP/40/20-38/2(P1)(39) ● Product:
+        3-Storey Townhouse ● Total Units: 210 ● Land Tenure: Freehold ● Land
+        Restrictions: Nil ● Land Encumbrances: Nil ● Expected Completion Date:
+        December 2027 ● Minimum Price: RM774,000 ● Maximum Price: RM1,138,800
+        ● This advertisement has been approved by Jabatan Perumahan Negara.
+      </p>
+      <p class="text-justify lg:text-start">
+        Disclaimer: The information contained herein is subject to change
+        without notification as may be required by relevant authorities or the
+        Developer’s consultants and cannot form part of an offer or contract.
+        The name of this development is subject to approval by relevant
+        authorities. Whilst every care is taken in providing this information,
+        the owner, developer and managers cannot be held liable for
+        variations. All illustrations and pictures are artist’s impressions
+        only and all measurements are approximate. The items are subject to
+        variations, modifications and substitutions as may be recommended by
+        the Company’s consultants and/or relevant Approving Authorities.
+      </p>
+      <p>
+        ©2024 Sunway Bintang Sdn Bhd (1992010007071). All Rights Reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Toast -->
+  <!-- submitting toast -->
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="submitnoti" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <strong class="me-auto">Submitting</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">Please Wait....</div>
+    </div>
+  </div>
+
+  <!-- success toast -->
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="successnoti" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header justify-content-between">
+        <div class="d-flex flex-row align-items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="fill-green-800" style="height: 20px">
+            <path
+              d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z" />
+          </svg>
+          <strong class="me-auto"> Thank you for your enquiry!</strong>
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        Your submission was successful. We will be in touch with you soon.
+      </div>
+    </div>
+  </div>
+  <!-- error toast -->
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="errornoti" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header justify-content-between">
+        <div class="d-flex flex-row align-items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="fill-red-800" style="height: 20px">
+            <path
+              d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z" />
+          </svg>
+          <strong class="me-auto"> An error has occurred</strong>
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        Your form could not be submitted. Please try again later.
+      </div>
+    </div>
+  </div>
+
+  <!-- End:Toast -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script type="text/javascript" src="plugin/slick/slick.min.js"></script>
+</body>
+
+</html>
