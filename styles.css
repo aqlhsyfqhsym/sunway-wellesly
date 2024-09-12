@@ -359,7 +359,12 @@ a {
 .navbar-toggler:focus {
   box-shadow: none !important;
 }
-
+ .nav-link.active {
+    font-weight: bold;  
+    text-decoration: underline; 
+    color: #9ecebf;
+  }
+ 
 @media screen and (min-width: 1024px) {
 
   .m\-\[150px\] {
@@ -462,3 +467,4 @@ a {
     transform: scale(0.5);
   }
 }
+
