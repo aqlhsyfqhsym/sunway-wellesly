@@ -64,23 +64,54 @@
     <script src="./index.js" defer></script>
     <script src="./script.js" defer></script>
     <style>
-      h1 {
-        letter-spacing: 8px;
+      @font-face {
+        font-family: "Noto Sans SC";
+        src: url("./assets/font/NotoSansSC-Regular.otf") format("opentype");
+        font-weight: normal;
+        font-style: normal;
       }
 
+      h1 {
+        letter-spacing: 8px;
+        font-family: "Noto Sans SC", sans-serif !important;
+
+      }
+
+      h2 h3 h4 h5 h6 {
+        font-family: "Noto Sans SC", sans-serif !important;
+
+      }
       .lifestyle-heading {
         line-height: 25px;
-        font-family: "Figtree", sans-serif;
+        font-family: "Noto Sans SC", sans-serif !important;
         font-size: 18px;
         line-height: 25px;
         font-weight: 400;
         margin-top: 20px;
         letter-spacing: 4px;
+        font-family: "Noto Sans SC", sans-serif !important;
       }
 
       .primary-heading-slick {
         font-weight: 400;
         letter-spacing: 3px;
+        font-family: "Noto Sans SC", sans-serif !important;
+      }
+      .primary-heading {
+        font-family: "Noto Sans SC", sans-serif !important;
+      }
+
+      .font-montserrat {
+        font-family: "Noto Sans SC", sans-serif !important;
+      }
+      p {
+        font-family: "Noto Sans SC", sans-serif !important;
+      }
+      .btn-custom-orange {
+        font-family: "Noto Sans SC", sans-serif !important;
+      }
+      .contact {
+        font-family: "Noto Sans SC", sans-serif !important;
       }
     </style>
   </head>
@@ -201,11 +232,7 @@
             >注 册</a
           >
         </li>
-        <li class="nav-item d-flex flex-row gap-1 text-white">
-          <a href="index.html" class="nav-link">EN</a>
-          <span class="text-white">|</span>
-          <a href="index-ch.html" class="nav-link active">中文</a>
-        </li>
+
         <li class="nav-item">
           <a
             href="360vr/360VR.html"
@@ -218,6 +245,11 @@
               class="img-fluid"
             />
           </a>
+        </li>
+        <li class="nav-item d-flex flex-row gap-1 text-white">
+          <a href="index.html" class="nav-link">EN</a>
+          <span class="text-white">|</span>
+          <a href="index-ch.html" class="nav-link active">中文</a>
         </li>
       </ul>
     </nav>
@@ -396,7 +428,7 @@
               <img src="./assets/features/ETS.svg" alt="" />
             </div>
             <p class="lifestyle-heading text-[#365E5D] text-center">
-              临 近ETS火车站及<br />
+              临近ETS火车站及<br />
               规划中的轻轨线路
             </p>
           </div>
@@ -453,7 +485,7 @@
               <img src="./assets/features/cctv.svg" alt="" />
             </div>
             <p class="lifestyle-heading text-[#365E5D] text-center">
-              设 有CCTV监控和 <br />
+              设有CCTV监控和 <br />
               7英尺高围墙
             </p>
           </div>
@@ -544,11 +576,16 @@
       >
         精 心 规 划，臻 于 完 美
       </h1>
-      <p class="text-center px-[10] fw-normal text-white" data-aos="fade-up">
-        沉浸在大自然中的Sunway Wellesley Serene Villas，绿 意 盎 然 、绿 树 成
-        荫，让 您 享 尽 美 景与宁 静 。 <br />
-        多 样 化 的 运 动 和 休 闲 设 施 让 户外 时 光 与居 家 生 活 一 样 充 满
-        乐 趣，内 外皆 是 温 馨 惬 意 。
+      <p
+        class="text-center px-[10] fw-normal text-white"
+        data-aos="fade-up"
+        style="letter-spacing: 2px"
+      >
+        沉浸在大自然中的
+        <span style="letter-spacing: 0px !important;">Sunway Wellesley Serene Villas</span
+        >，绿意盎然 、绿树成 荫，让 您 享 尽 美 景与宁 静 。 <br />
+        多样化的运动和休闲设施让户外时光与居家生活 一 样充满
+        乐趣，内外皆是温馨惬意 。
       </p>
       <div
         class="d-flex flex-md-row flex-column custom-padding gap-4 pb-md-2 justify-content-center"
@@ -559,7 +596,7 @@
           <img class="rounded-4" src="./assets/siteplan/site-plan.png" alt="" />
         </div>
         <div class="bg-[#D6EDE7] rounded-4">
-          <img src="./assets/siteplan/map-legend.png" alt="" />
+          <img src="./assets/siteplan/map-legend-ch.png" alt="" />
         </div>
       </div>
     </section>
@@ -705,10 +742,10 @@
                 围篱式社区
               </h2>
               <p
-                class="text-white fw-normal fs-5 pe-md-2"
-                style="letter-spacing: 1px"
+                class="text-white fw-normal fs-5 pe-md-0"
+                style="letter-spacing: 2px"
               >
-                欢迎来到 Sunway Wellesley - 开启全新篇章，<br />
+                欢迎来到 <span  style="letter-spacing: 0px"> Sunway Wellesley </span> - 开启全新篇章，<br />
                 体验重新定义并提升的绿色宜居社区精髓， <br />
                 让您尽享优质生活。
               </p>
@@ -720,9 +757,12 @@
               >
                 多样化建筑外型设计
               </h2>
-              <p class="text-white fw-normal fs-5 pe-md-2" style="letter-spacing: 2px">
-                在热带雨林环境中，多样化的现代建筑外 <br/>
-                观与大自然融为 一 体，营造出轻松宜人的 <br/>
+              <p
+                class="text-white fw-normal fs-5 pe-md-2"
+                style="letter-spacing: 2px"
+              >
+                在热带雨林环境中，多样化的现代建筑外 <br />
+                观与大自然融为 一 体，营造出轻松宜人的 <br />
                 生活氛围，让每次归家都是 一 种享受。
               </p>
             </div>
@@ -749,8 +789,11 @@
                 绿荫大道
               </h2>
 
-              <p class="text-white fw-normal fs-5 pe-md-3" style="letter-spacing: 2px">
-                蜿蜒的小径穿梭于林荫间的步道，<br/>
+              <p
+                class="text-white fw-normal fs-5 pe-md-3"
+                style="letter-spacing: 2px"
+              >
+                蜿蜒的小径穿梭于林荫间的步道，<br />
                 为归家的心增添多一份的温馨。
               </p>
             </div>
@@ -762,8 +805,11 @@
                 休闲会所
               </h2>
 
-              <p class="text-white fw-normal fs-5 pe-md-5" style="letter-spacing: 2px">
-                惬意的俱乐部环境，是您和您亲爱的人 <br/>
+              <p
+                class="text-white fw-normal fs-5 pe-md-5"
+                style="letter-spacing: 2px"
+              >
+                惬意的俱乐部环境，是您和您亲爱的人 <br />
                 放松嬉水的好去处。
               </p>
             </div>
@@ -775,9 +821,12 @@
                 儿童游乐场
               </h2>
 
-              <p class="text-white fw-normal fs-5 pe-md-3" style="letter-spacing: 2px">
-                畅享生活、轻松玩乐及尽情欢笑，您所需 <br/> 的休闲设施
-                都近在咫尺，步行即可到达 。
+              <p
+                class="text-white fw-normal fs-5 pe-md-3"
+                style="letter-spacing: 2px"
+              >
+                畅享生活、轻松玩乐及尽情欢笑，您所需 <br />
+                的休闲设施 都近在咫尺，步行即可到达 。
               </p>
             </div>
             <div class="content p-3 p-md-5 ps-md-1 pe-md-1">
@@ -786,8 +835,11 @@
               </h2>
               <h4 class="text-white font-light mb-2">客厅与餐厅</h4>
 
-              <p class="text-white fw-normal fs-5 pe-md-4" style="letter-spacing: 2px">
-                以流动性为主的设计，舒适的居住环境亦 <br/>
+              <p
+                class="text-white fw-normal fs-5 pe-md-4"
+                style="letter-spacing: 2px"
+              >
+                以流动性为主的设计，舒适的居住环境亦 <br />
                 设有采光充足的房间。
               </p>
             </div>
@@ -800,8 +852,11 @@
               </h2>
               <h4 class="text-white font-light mb-2">主卧室</h4>
 
-              <p class="text-white fw-normal fs-5 pe-md-2" style="letter-spacing: 2px">
-                宽敞宜人，Sunway Wellesley 以其优雅、<br/>
+              <p
+                class="text-white fw-normal fs-5 pe-md-2"
+                style="letter-spacing: 2px"
+              >
+                宽敞宜人，Sunway Wellesley 以其优雅、<br />
                 舒适与独特魅力的格局引以为傲。
               </p>
             </div>
@@ -812,8 +867,11 @@
               </h2>
               <h4 class="text-white font-light mb-2">客厅与餐厅</h4>
 
-              <p class="text-white fw-normal fs-5 pe-md-4" style="letter-spacing: 2px">
-                精心设计的公共区域旨在让家人们相聚， <br/>一起享受天伦之乐！
+              <p
+                class="text-white fw-normal fs-5 pe-md-4"
+                style="letter-spacing: 2px"
+              >
+                精心设计的公共区域旨在让家人们相聚， <br />一起享受天伦之乐！
               </p>
             </div>
 
@@ -823,9 +881,12 @@
               </h2>
               <h4 class="text-white font-light mb-2">卧室与阳台</h4>
 
-              <p class="text-white fw-normal fs-5 pe-md-3" style="letter-spacing: 2px">
-                走进温馨的阳台，既能欣赏映入眼帘的大自 <br/> 然风
-                景，亦能与家人一 起留下美好回忆。
+              <p
+                class="text-white fw-normal fs-5 pe-md-3"
+                style="letter-spacing: 2px"
+              >
+                走进温馨的阳台，既能欣赏映入眼帘的大自 <br />
+                然风 景，亦能与家人一 起留下美好回忆。
               </p>
             </div>
             <div class="content p-3 p-md-5 ps-md-1 pe-md-1">
@@ -834,8 +895,11 @@
               </h2>
               <h4 class="text-white font-light mb-2">客厅与餐厅</h4>
 
-              <p class="text-white fw-normal fs-5 pe-md-2" style="letter-spacing: 2px">
-                在这宽敞的奢华空间享受轻松美好时刻， <br/>内心总能找到愉悦。
+              <p
+                class="text-white fw-normal fs-5 pe-md-2"
+                style="letter-spacing: 2px"
+              >
+                在这宽敞的奢华空间享受轻松美好时刻， <br />内心总能找到愉悦。
               </p>
             </div>
             <div class="content p-3 p-md-5 ps-md-1 pe-md-1">
@@ -844,8 +908,11 @@
               </h2>
               <h4 class="text-white font-light mb-2">客厅与餐厅</h4>
 
-              <p class="text-white fw-normal fs-5 pe-md-3" style="letter-spacing: 2px">
-                一个供家人团聚和享受的空间。<br/>为美好生活干杯。
+              <p
+                class="text-white fw-normal fs-5 pe-md-3"
+                style="letter-spacing: 2px"
+              >
+                一个供家人团聚和享受的空间。<br />为美好生活干杯。
               </p>
             </div>
 
@@ -855,8 +922,11 @@
               </h2>
               <h4 class="text-white font-light mb-2">阳台与休闲区</h4>
 
-              <p class="text-white fw-normal fs-5 pe-md-3" style="letter-spacing: 2px">
-                创新规划意味着您的生活空间将有全新<br/>的体验 。尽情享受吧！
+              <p
+                class="text-white fw-normal fs-5 pe-md-3"
+                style="letter-spacing: 2px"
+              >
+                创新规划意味着您的生活空间将有全新<br />的体验 。尽情享受吧！
               </p>
             </div>
           </div>
@@ -992,7 +1062,7 @@
         style="transform: rotate(180deg)"
       />
       <h1 class="text-[#2A565A] text-center primary-heading">
-        理 想 生 活，由 此 开启
+        理 想 生 活，由 此 开 启
       </h1>
       <img class="w-75" src="./assets/zoomed-map/zoomed-map-ch.svg" alt="" />
 
@@ -1066,9 +1136,13 @@
       class="sections d-flex flex-column gap-4 align-items-center background-section"
     >
       <img alt="" src="./assets/perks/sunway_logo.png" />
-      <p class="text-dark text-center  custom-width-70 fs-5" style="letter-spacing: 2px;">
-        一个专为双威产业项目业主所打造的全方位社区体验。 <br/>无 论 是 买 家、转 售业
-        主 还 是 租 户，每 一 个人都 能 享 受 这 为 您 量 身 定 做 的 体 验
+      <p
+        class="text-dark text-center custom-width-70 fs-5"
+        style="letter-spacing: 2px"
+      >
+        一个专为双威产业项目业主所打造的全方位社区体验。 <br />无 论 是 买
+        家、转 售业 主 还 是 租 户，每 一 个人都 能 享 受 这 为 您 量 身 定 做
+        的 体 验
       </p>
 
       <div class="row px-5">
@@ -1079,7 +1153,7 @@
           <div>
             <img alt="" src="./assets/perks/rent-text.svg" />
           </div>
-          <p class="fs-5 text-center" style="letter-spacing: 2px;">
+          <p class="fs-5 text-center" style="letter-spacing: 2px">
             独家优惠 <br />
             <span class="me-1">Rent+</span> <br />
             25% 租金抵扣计划
@@ -1093,7 +1167,7 @@
           <div>
             <img alt="" src="./assets/perks/care-text.svg" />
           </div>
-          <p class="fs-5 text-center" style="letter-spacing: 2px;">
+          <p class="fs-5 text-center" style="letter-spacing: 2px">
             无限便利<br />
             <span class="me-1">Care+</span> <br />
             家居护理和管理服务
@@ -1107,7 +1181,7 @@
           <div>
             <img alt="" src="./assets/perks/reward-text.svg" />
           </div>
-          <p class="fs-5 text-center" style="letter-spacing: 2px;">
+          <p class="fs-5 text-center" style="letter-spacing: 2px">
             享受福利<br />
             <span class="me-1">Reward+</span> <br />
             购房回扣和奖励
@@ -1213,7 +1287,7 @@
           <label for="terms" class="text-[#2A565A] custom-font font-figtree">
             双威产业
             <br />
-            我 已 满 � � 岁。我 已 阅 读 并 同 意 条
+            我 已 满 18 岁。我 已 阅 读 并 同 意 条
             <a
               target="_blank"
               href="https://www.sunwayproperty.com/terms-and-conditions"
