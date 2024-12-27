@@ -490,3 +490,26 @@ a {
 }
 
 /* Modal css here */
+.modal-header {
+  border-bottom: none !important;
+}
+
+.btn-close-modal {
+  margin:15px 25px 0px 0px
+}
+
+.modal-content{
+  margin : 0 auto !important;
+  }
+
+
+@media screen and (max-width: 768px) {
+  .btn-close-modal {
+    margin:10px 10px 0px 0px
+  }
+  
+  .modal-content{
+  margin-top : 10rem !important;
+  }
+
+}
