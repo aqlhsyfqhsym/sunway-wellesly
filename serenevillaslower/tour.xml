@@ -1,0 +1,491 @@
+﻿<krpano version="1.21" title="Sunway Wellesley Serene Villas" onstart="action(start1);">
+
+	<include url="skin/vtourskin.xml" />
+	<include url="map.xml" />
+
+	<action name="mobilescale" autorun="preinit" devices="mobile">
+   mul(stagescale,0.7);
+	</action>
+		
+	<plugin name="logo" url="skin/logo.png" align="lefttop" keep="true" x="10" y="10" zorder="20" enabled="false" /> 
+	
+	
+	<!-- customize skin settings: maps, gyro, webvr, thumbnails, tooltips, layout, design, ... -->
+	<skin_settings maps="false"
+	               maps_type="google"
+	               maps_bing_api_key=""
+	               maps_google_api_key=""
+	               maps_zoombuttons="false"
+	               maps_loadonfirstuse="true"
+	               gyro="true"
+	               gyro_keeplookingdirection="false"
+	               webvr="true"
+	               webvr_keeplookingdirection="true"
+	               webvr_prev_next_hotspots="true"
+	               autotour="false"
+	               littleplanetintro="false"
+	               followmousecontrol="false"
+	               title="true"
+	               thumbs="true"
+	               thumbs_width="120" thumbs_height="80" thumbs_padding="10" thumbs_crop="0|40|240|160"
+	               thumbs_opened="true"
+	               thumbs_text="true"
+	               thumbs_dragging="true"
+	               thumbs_onhoverscrolling="false"
+	               thumbs_scrollbuttons="false"
+	               thumbs_scrollindicator="false"
+	               thumbs_loop="false"
+	               tooltips_buttons="false"
+	               tooltips_thumbs="false"
+	               tooltips_hotspots="false"
+	               tooltips_mapspots="false"
+	               deeplinking="false"
+	               loadscene_flags="MERGE"
+	               loadscene_blend="OPENBLEND(0.5, 0.0, 0.75, 0.05, linear)"
+	               loadscene_blend_prev="SLIDEBLEND(0.5, 180, 0.75, linear)"
+	               loadscene_blend_next="SLIDEBLEND(0.5,   0, 0.75, linear)"
+	               loadingtext=""
+	               layout_width="100%"
+	               layout_maxwidth="814"
+	               controlbar_width="-24"
+	               controlbar_height="40"
+	               controlbar_offset="20"
+	               controlbar_offset_closed="-40"
+	               controlbar_overlap.no-fractionalscaling="10"
+	               controlbar_overlap.fractionalscaling="0"
+	               design_skin_images="vtourskin.png"
+	               design_bgcolor="0x2D3E50"
+	               design_bgalpha="0.8"
+	               design_bgborder="0"
+	               design_bgroundedge="1"
+	               design_bgshadow="0 4 10 0x000000 0.3"
+	               design_thumbborder_bgborder="3 0xFFFFFF 1.0"
+	               design_thumbborder_padding="2"
+	               design_thumbborder_bgroundedge="0"
+	               design_text_css="color:#FFFFFF; font-family:Arial;"
+	               design_text_shadow="1"
+	               />
+
+	<!--
+	    For an alternative skin design either change the <skin_settings> values 
+	    from above or optionally include one of the predefined designs from below.
+	-->
+	<!-- <include url="skin/vtourskin_design_flat_light.xml"  /> -->
+	 <include url="skin/vtourskin_design_glass.xml"       /> 
+	<!-- <include url="skin/vtourskin_design_ultra_light.xml" /> -->
+	<!-- <include url="skin/vtourskin_design_117.xml"         /> -->
+	<!-- <include url="skin/vtourskin_design_117round.xml"    /> -->
+	<!-- <include url="skin/vtourskin_design_black.xml"       /> -->
+	
+	<!-- startup action - load the first scene -->
+	<action name="startup" autorun="onstart">
+		if(startscene === null OR !scene[get(startscene)], copy(startscene,scene[0].name); );
+		loadscene(get(startscene), null, MERGE);
+		if(startactions !== null, startactions() );
+	</action>
+	
+	<autorotate enabled="true"
+            waittime="10"
+            speed="4.0"
+			tofov="120.0"
+            />
+			
+			<skin_settings uishowpic="" />
+<skin_settings openautonext="1" />
+			
+			<action name="start1">
+
+delayedcall(autonexttimer,100, autonextscene(););
+
+</action>
+
+<action name="prevscene">
+		copy(sceneindex, scene[get(xml.scene)].index);
+		sub(lastindex, scene.count, 1);
+		dec(sceneindex, 1, 0, get(lastindex));
+		loadscene(get(scene[get(sceneindex)].name), null, MERGE, BLEND(0.5));
+	</action>
+	
+	<action name="nextscene">
+		copy(sceneindex, scene[get(xml.scene)].index);
+		sub(lastindex, scene.count, 1);
+		inc(sceneindex, 1, get(lastindex), 0);
+		loadscene(get(scene[get(sceneindex)].name), null, MERGE, BLEND(0.5));
+	</action>
+<action name="autonextscene">
+    if(skin_settings.openautonext == 1,
+        nextscene();
+        delayedcall(autonexttimer,100, autonextscene();
+        );
+    );
+    </action>
+    <action name="autonextchange">
+    if(skin_settings.openautonext == 0,
+        set(skin_settings.openautonext,1);
+        set(autorotate.enabled,true);
+        delayedcall(autonexttimer,100, autonextscene(););
+        ,
+        set(skin_settings.openautonext,0);
+        stopdelayedcall(autonexttimer);
+        set(plugin[closeautonext].visible,false);
+    );
+    </action>
+    <action name="autogochange">
+    if(autorotate.enabled == true,
+    set(autorotate.enabled,false);,set(autorotate.enabled,true);
+    );
+    </action>
+
+	<scene name="scene_VR0_1644" title="Dining" onstart="activatespot(spot1,270);" thumburl="panos/VR0_1644.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="2.171" vlookat="-0.310" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/VR0_1644.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/VR0_1644.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1600" />
+		</image>
+				 
+		 <events name="nadirlogorotation" onviewchange="if(hotspot[nadirlogo].rotatewithview, set(hotspot[nadirlogo].rotate,get(view.hlookat)) );" />
+		 <hotspot name="nadirlogo"
+		     url="skin/nadir.png"
+			 enabled="false"
+			 tx="0.0"
+			 tz="0.0"
+	         ath="0.000"
+	         atv="90.000"
+	         distorted="true"
+	         scale="0.6"
+	         rotate="0.0"
+	         rotatewithview="auto"
+	         onclick="switch(rotatewithview); invalidatescreen();"
+			 />
+	
+		<hotspot name="spot3" style="hotspot_ani_white" ath="16.780" atv="-2.068" linkedscene="scene_vr0_1651" linkedscene_hoffset="3.39" use3dtransition="true" />
+	
+	</scene>
+	
+	<scene name="scene_VR0_1651" title="Living" onstart="activatespot(spot2,270);" thumburl="panos/VR0_1651.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/VR0_1651.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/VR0_1651.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1600" />
+		</image>
+				 
+		 <events name="nadirlogorotation" onviewchange="if(hotspot[nadirlogo].rotatewithview, set(hotspot[nadirlogo].rotate,get(view.hlookat)) );" />
+		 <hotspot name="nadirlogo"
+		     url="skin/nadir.png"
+			 enabled="false"
+			 tx="0.0"
+			 tz="0.0"
+	         ath="0.000"
+	         atv="90.000"
+	         distorted="true"
+	         scale="0.6"
+	         rotate="0.0"
+	         rotatewithview="auto"
+	         onclick="switch(rotatewithview); invalidatescreen();"
+			 />
+		<hotspot name="spot4" style="hotspot_ani_white" ath="-177" atv="2.5" linkedscene="scene_vr0_1644" linkedscene_hoffset="356.61" use3dtransition="true" />
+		<hotspot name="spot1" style="hotspot_ani_white" ath="47.103" atv="-0.101" linkedscene="scene_vr0_1669" linkedscene_hoffset="-2.06" use3dtransition="true" />
+		<hotspot name="spot2" style="hotspot_ani_white" ath="116.762" atv="-0.010" linkedscene="scene_vr0_1684" linkedscene_hoffset="-1.05" use3dtransition="true" />
+
+	</scene>
+
+		<scene name="scene_VR0_1684" title="Corridor" onstart="activatespot(spot3,270);" thumburl="panos/VR0_1684.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/VR0_1684.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/VR0_1684.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1600" />
+		</image>
+				 
+		 <events name="nadirlogorotation" onviewchange="if(hotspot[nadirlogo].rotatewithview, set(hotspot[nadirlogo].rotate,get(view.hlookat)) );" />
+		 <hotspot name="nadirlogo"
+		     url="skin/nadir.png"
+			 enabled="false"
+			 tx="0.0"
+			 tz="0.0"
+	         ath="0.000"
+	         atv="90.000"
+	         distorted="true"
+	         scale="0.6"
+	         rotate="0.0"
+	         rotatewithview="auto"
+	         onclick="switch(rotatewithview); invalidatescreen();"
+			 />
+
+		<hotspot name="spot4" style="hotspot_ani_white" ath="3.814" atv="1.343" linkedscene="scene_vr0_1669" linkedscene_hoffset="-1.35" use3dtransition="true" />
+		<hotspot name="spot1" style="hotspot_ani_white" ath="-178.422" atv="-1.497" linkedscene="scene_vr0_1697" linkedscene_hoffset="359.03" use3dtransition="true" />
+		<hotspot name="spot3" style="hotspot_ani_white" ath="-64.290" atv="-0" linkedscene="scene_vr0_1651" linkedscene_hoffset="361.05" use3dtransition="true" />
+		<hotspot name="spot5" style="hotspot_ani_black" ath="93.014" atv="-3.175" linkedscene="scene_vr0_1707" linkedscene_hoffset="-0.03" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_VR0_1669" title="Kitchen" onstart="activatespot(spot4,270);" thumburl="panos/VR0_1669.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="2.426" vlookat="-0.024" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/VR0_1669.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/VR0_1669.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1600" />
+		</image>
+		
+		 <events name="nadirlogorotation" onviewchange="if(hotspot[nadirlogo].rotatewithview, set(hotspot[nadirlogo].rotate,get(view.hlookat)) );" />
+		 <hotspot name="nadirlogo"
+		     url="skin/nadir.png"
+			 enabled="false"
+			 tx="0.0"
+			 tz="0.0"
+	         ath="0.000"
+	         atv="90.000"
+	         distorted="true"
+	         scale="0.6"
+	         rotate="0.0"
+	         rotatewithview="auto"
+	         onclick="switch(rotatewithview); invalidatescreen();"
+			 />
+		
+		<hotspot name="spot1" style="hotspot_ani_white" ath="88.304" atv="-0.392" linkedscene="scene_vr0_1676" linkedscene_hoffset="1.37" use3dtransition="true" />
+		<hotspot name="spot2" style="hotspot_ani_white" ath="-134.955" atv="-0.927" linkedscene="scene_vr0_1651" linkedscene_hoffset="362.06" use3dtransition="true" />
+		<hotspot name="spot3" style="hotspot_ani_white" ath="-177.535" atv="-1.159" linkedscene="scene_vr0_1684" linkedscene_hoffset="361.35" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_VR0_1676" title="Yard" onstart="activatespot(spot5,270);" thumburl="panos/VR0_1676.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="722.138" vlookat="-0.022" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/VR0_1676.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/VR0_1676.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1600" />
+		</image>
+				 
+		 <events name="nadirlogorotation" onviewchange="if(hotspot[nadirlogo].rotatewithview, set(hotspot[nadirlogo].rotate,get(view.hlookat)) );" />
+		 <hotspot name="nadirlogo"
+		     url="skin/nadir.png"
+			 enabled="false"
+			 tx="0.0"
+			 tz="0.0"
+	         ath="0.000"
+	         atv="90.000"
+	         distorted="true"
+	         scale="0.6"
+	         rotate="0.0"
+	         rotatewithview="auto"
+	         onclick="switch(rotatewithview); invalidatescreen();"
+			 />
+
+		<hotspot name="spot2" style="hotspot_ani_white" ath="-90.322" atv="0.749" linkedscene="scene_vr0_1669" linkedscene_hoffset="358.63" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_VR0_1697" title="Bedroom 3" onstart="activatespot(spot6,270);" thumburl="panos/VR0_1697.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="1981.066" vlookat="-0.951" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/VR0_1697.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/VR0_1697.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1600" />
+		</image>
+				 
+		 <events name="nadirlogorotation" onviewchange="if(hotspot[nadirlogo].rotatewithview, set(hotspot[nadirlogo].rotate,get(view.hlookat)) );" />
+		 <hotspot name="nadirlogo"
+		     url="skin/nadir.png"
+			 enabled="false"
+			 tx="0.0"
+			 tz="0.0"
+	         ath="0.000"
+	         atv="90.000"
+	         distorted="true"
+	         scale="0.6"
+	         rotate="0.0"
+	         rotatewithview="auto"
+	         onclick="switch(rotatewithview); invalidatescreen();"
+			 />
+
+		<hotspot name="spot5" style="hotspot_ani_white" ath="0.606" atv="1.628" linkedscene="scene_vr0_1684" linkedscene_hoffset="0.97" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_VR0_1707" title="Staircase" onstart="activatespot(spot7,270);" thumburl="panos/VR0_1707.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/VR0_1707.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/VR0_1707.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1600" />
+		</image>
+				 
+		 <events name="nadirlogorotation" onviewchange="if(hotspot[nadirlogo].rotatewithview, set(hotspot[nadirlogo].rotate,get(view.hlookat)) );" />
+		 <hotspot name="nadirlogo"
+		     url="skin/nadir.png"
+			 enabled="false"
+			 tx="0.0"
+			 tz="0.0"
+	         ath="0.000"
+	         atv="90.000"
+	         distorted="true"
+	         scale="0.6"
+	         rotate="0.0"
+	         rotatewithview="auto"
+	         onclick="switch(rotatewithview); invalidatescreen();"
+			 />
+
+		<hotspot name="spot5" style="hotspot_ani_black" ath="-87.810" atv="1.042" linkedscene="scene_vr0_1684" linkedscene_hoffset="359.49" use3dtransition="true" />
+		<hotspot name="spot1" style="hotspot_ani_black" ath="-177.970" atv="-31.962" linkedscene="scene_vr0_1725" linkedscene_hoffset="448.38" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_VR0_1725" title="First Floor" onstart="activatespot(spot8,270);" thumburl="panos/VR0_1725.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="1892.366" vlookat="0.403" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/VR0_1725.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/VR0_1725.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1600" />
+		</image>
+		 
+		 <events name="nadirlogorotation" onviewchange="if(hotspot[nadirlogo].rotatewithview, set(hotspot[nadirlogo].rotate,get(view.hlookat)) );" />
+		 <hotspot name="nadirlogo"
+		     url="skin/nadir.png"
+			 enabled="false"
+			 tx="0.0"
+			 tz="0.0"
+	         ath="0.000"
+	         atv="90.000"
+	         distorted="true"
+	         scale="0.6"
+	         rotate="0.0"
+	         rotatewithview="auto"
+	         onclick="switch(rotatewithview); invalidatescreen();"
+			 />
+		 
+		<hotspot name="spot1" style="hotspot_ani_white" ath="-179.181" atv="1.889" linkedscene="scene_vr0_1752" linkedscene_hoffset="362.28" use3dtransition="true" />
+		<hotspot name="spot3" style="hotspot_ani_white" ath="1.287" atv="-3.570" linkedscene="scene_vr0_1761" linkedscene_hoffset="0.33" use3dtransition="true" />
+		<hotspot name="spot2" style="hotspot_ani_white" ath="90.407" atv="11.731" linkedscene="scene_vr0_1707" linkedscene_hoffset="-88.38" use3dtransition="true" />
+		
+	</scene>
+
+	<scene name="scene_VR0_1752" title="Master Bedroom" onstart="activatespot(spot9,270);" thumburl="panos/VR0_1752.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="3782.892" vlookat="-0.613" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/VR0_1752.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/VR0_1752.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1600" />
+		</image>
+
+		 <events name="nadirlogorotation" onviewchange="if(hotspot[nadirlogo].rotatewithview, set(hotspot[nadirlogo].rotate,get(view.hlookat)) );" />
+		 <hotspot name="nadirlogo"
+		     url="skin/nadir.png"
+			 enabled="false"
+			 tx="0.0"
+			 tz="0.0"
+	         ath="0.000"
+	         atv="90.000"
+	         distorted="true"
+	         scale="0.6"
+	         rotate="0.0"
+	         rotatewithview="auto"
+	         onclick="switch(rotatewithview); invalidatescreen();"
+			 />
+		 
+		 <hotspot name="spot3" style="hotspot_ani_white" ath="3.099" atv="-2.161" linkedscene="scene_vr0_1725" linkedscene_hoffset="-2.28" use3dtransition="true" />
+		<hotspot name="spot1" style="hotspot_ani_white" ath="-174.218" atv="-0.115" linkedscene="scene_vr0_1738" linkedscene_hoffset="354.22" use3dtransition="true" />
+
+	</scene>
+	
+	<scene name="scene_VR0_1738" title="Wardrobe" onstart="activatespot(spot10,270);" thumburl="panos/VR0_1738.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="4949.408" vlookat="0.211" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/VR0_1738.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/VR0_1738.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1600" />
+		</image>
+		
+		 <events name="nadirlogorotation" onviewchange="if(hotspot[nadirlogo].rotatewithview, set(hotspot[nadirlogo].rotate,get(view.hlookat)) );" />
+		 <hotspot name="nadirlogo"
+		     url="skin/nadir.png"
+			 enabled="false"
+			 tx="0.0"
+			 tz="0.0"
+	         ath="0.000"
+	         atv="90.000"
+	         distorted="true"
+	         scale="0.6"
+	         rotate="0.0"
+	         rotatewithview="auto"
+	         onclick="switch(rotatewithview); invalidatescreen();"
+			 />
+		<hotspot name="spot2" style="hotspot_ani_white" ath="1.488" atv="-0.762" linkedscene="scene_vr0_1752" linkedscene_hoffset="8.88" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_VR0_1761" title="Bedroom 2" onstart="activatespot(spot11,270);" thumburl="panos/VR0_1761.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="3874.110" vlookat="0.164" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/VR0_1761.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/VR0_1761.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1600" />
+		</image>
+
+		 <events name="nadirlogorotation" onviewchange="if(hotspot[nadirlogo].rotatewithview, set(hotspot[nadirlogo].rotate,get(view.hlookat)) );" />
+		 <hotspot name="nadirlogo"
+		     url="skin/nadir.png"
+			 enabled="false"
+			 tx="0.0"
+			 tz="0.0"
+	         ath="0.000"
+	         atv="90.000"
+	         distorted="true"
+	         scale="0.6"
+	         rotate="0.0"
+	         rotatewithview="auto"
+	         onclick="switch(rotatewithview); invalidatescreen();"
+			 />
+			 
+		<hotspot name="spot4" style="hotspot_ani_white" ath="-178.388" atv="-0.401" linkedscene="scene_vr0_1725" linkedscene_hoffset="359.67" use3dtransition="true" />
+
+		 
+	</scene>
+
+
+</krpano>

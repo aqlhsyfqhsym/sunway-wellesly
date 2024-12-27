@@ -361,6 +361,26 @@ a {
     text-decoration: underline; 
     color: #9ecebf;
   }
+
+
+  /* Start Dropdown */
+     .dropdown-menu {
+      background-color: #365E5D !important;  
+    }
+  
+     .dropdown-menu .dropdown-item {
+      color: #FFFFFF;  
+    }
+  
+     .dropdown-menu .dropdown-item:hover,
+    .dropdown-menu .dropdown-item:focus {
+      background-color: #9ECEBF;  
+      color: #FFFFFF;  
+    }
+ 
+
+  /* end Dropdown */
+
  
 @media screen and (min-width: 1024px) {
 

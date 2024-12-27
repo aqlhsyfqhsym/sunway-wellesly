@@ -1,0 +1,71 @@
+<krpano>
+
+
+	<plugin name="detail" url="skin/icon1.png" align="righttop" keep="true" x="10" y="10" zorder="1" onhover="set(url,skin/icon2.png);" onout="set(url,skin/icon1.png);"  onclick="
+            tween(plugin[map].alpha, 1.0, 0.5); 
+            tween(layer[mapcontainer].alpha, 1.0, 0.5); 
+            set(plugin[map].visible, true); 
+            set(layer[mapcontainer].visible, true);
+        " /> 
+	
+    <plugin name="map" url="skin/plan.jpg" keep="true" x="10" y = "10" align="righttop"  zorder="2" 
+			content="width=device-width" width="253" height="350" maxWidth="253"
+			handcursor="true" visible="false" onclick="
+            trace('Map clicked'); 
+            tween(plugin[map].alpha, 0.0, 0.5); 
+            tween(layer[mapcontainer].alpha, 0.0, 0.5); 
+            delayedcall(0.5, set(plugin[map].visible, false); set(layer[mapcontainer].visible, false);); 
+            set(plugin[detail].url,skin/icon1.png);
+        " />	
+
+	<layer name="mapcontainer" keep="true" type="container" alpha="0" bgcolor="0x000000" bgalpha="0.0" zorder="2" align="righttop" x="0" y="0" width="253" height="350">
+	
+	<layer name="radar" keep="true"
+	       url="%VIEWER%/plugins/radar.js"
+		   align="righttop" edge="center" x="0" y="0"
+	       zorder="1"
+		   scale="0.5"
+	       scale.mobile="0.5"
+	       fillalpha="0.5" fillcolor="0x7F5F3F"
+	       linewidth="1.0" linecolor="0xE0E0A0" linealpha="0.5"
+		   
+	       />
+		   
+		
+		<plugin name="activespot" url="skin/current_pano.png" keep="true" align="righttop" x="11" y ="11" edge="center" visible="true" zorder="6" />
+
+		<layer name="spot1" url="%SWFPATH%/skin/hot.png"  align="righttop" edge="center" x="230" y="120" zorder="3" onclick="loadscene(scene_VR0_1644);" />
+		
+		<layer name="spot2" url="%SWFPATH%/skin/hot.png"  align="righttop" edge="center" x="225" y="90" zorder="3" onclick="loadscene(scene_VR0_1651);" />
+	
+		<layer name="spot3" url="%SWFPATH%/skin/hot.png"  align="righttop" edge="center" x="190" y="105" zorder="3" onclick="loadscene(scene_VR0_1684);" />
+	
+		<layer name="spot4" url="%SWFPATH%/skin/hot.png"  align="righttop" edge="center" x="190" y="55" zorder="3" onclick="loadscene(scene_VR0_1669);" />
+	
+		<layer name="spot5" url="%SWFPATH%/skin/hot.png"  align="righttop" edge="center" x="155" y="55" zorder="3" onclick="loadscene(scene_VR0_1676);" />
+	
+		<layer name="spot6" url="%SWFPATH%/skin/hot.png"  align="righttop" edge="center" x="190" y="135" zorder="3" onclick="loadscene(scene_VR0_1697);" />
+	
+		<layer name="spot7" url="%SWFPATH%/skin/hot.png"  align="righttop" edge="center" x="155" y="105" zorder="3" onclick="loadscene(scene_VR0_1707);" />
+	
+		<layer name="spot8" url="%SWFPATH%/skin/hot.png"  align="righttop" edge="center" x="65" y="165" zorder="3" onclick="loadscene(scene_VR0_1725);" />
+	
+		<layer name="spot9" url="%SWFPATH%/skin/hot.png"  align="righttop" edge="center" x="65" y="185" zorder="3" onclick="loadscene(scene_VR0_1752);" />
+	
+		<layer name="spot10" url="%SWFPATH%/skin/hot.png"  align="righttop" edge="center" x="65" y="225" zorder="3" onclick="loadscene(scene_VR0_1738);" />
+	
+		<layer name="spot11" url="%SWFPATH%/skin/hot.png"  align="righttop" edge="center" x="65" y="130" zorder="3" onclick="loadscene(scene_VR0_1761);" />
+	
+	</layer>
+	
+	<action name="activatespot">
+			set(plugin[activespot].parent, plugin[%1]);
+			set(plugin[activespot].visible, true);
+			copy(plugin[radar].x, plugin[%1].x);
+			copy(plugin[radar].y, plugin[%1].y);
+			set(plugin[radar].visible, true);
+			set(plugin[radar].heading, %2);
+	</action>
+	
+
+</krpano>
