@@ -193,6 +193,7 @@ a {
   position: relative;
   display: inline-block;
   overflow: hidden;
+  max-width: 800px;
 }
 
 .overlay {
