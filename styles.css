@@ -499,6 +499,9 @@ a {
   margin:15px 25px 0px 0px
 }
 
+.modal-dialog {
+  margin-top : 150px !important;
+}
 .modal-content{
   margin : 0 auto !important;
   }
