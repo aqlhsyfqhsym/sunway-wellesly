@@ -178,15 +178,15 @@ a {
 }
 
 .btn-custom-orange {
-  background-color: #DC4D55;
-  border: 2px solid #DC4D55;
+  background-color: #F57921;
+  border: 2px solid #F57921;
   color: white;
   font-family: "Figtree", sans-serif !important;
   font-size: 12px ;
 }
 
 .btn-custom-orange:hover {
-  background-color: #DC4D55;
+  background-color: #F57921;
 }
 
 /* end custom section  */

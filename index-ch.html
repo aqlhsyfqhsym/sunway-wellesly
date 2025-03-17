@@ -1182,72 +1182,42 @@
     </section>
 
     <!-- SECTION 9 -->
-    <section
-      class="sections d-flex flex-column gap-4 align-items-center background-section"
-    >
-      <img alt="" src="./assets/perks/sunway_logo.png" />
-      <p
-        class="text-dark text-center custom-width-70 fs-5"
-        style="letter-spacing: 2px"
-      >
-        一个专为双威产业项目业主所打造的全方位社区体验。
-        <br />无论是买家、转售业主还是租户，每一个人都能享受这为您量身定做的体验
-      </p>
+    <section class="position-relative">
+      <img
+        src="./assets/perks/generation-bg-ch.png"
+        class="object-cover w-100 h-100 object-top"
+        alt="..."
+      />
 
-      <div class="row px-5 align-items-end">
-        <div class="col-md-4 d-flex flex-column gap-4 align-items-center">
-          <div class="h-[100px]">
-            <img alt="" src="./assets/perks/rent.svg" />
-          </div>
-          <div>
-            <img alt="" src="./assets/perks/rent-text.svg" />
-          </div>
-          <p class="fs-5 text-center" style="letter-spacing: 2px">
-            独家优惠 <br />
-            <span class="me-1">Rent+</span> <br />
-            25% 租金抵扣计划
-          </p>
-        </div>
-
-        <div class="col-md-4 d-flex flex-column gap-4 align-items-center">
-          <div class="h-[100px]">
-            <img alt="" src="./assets/perks/care.svg" />
-          </div>
-          <div>
-            <img alt="" src="./assets/perks/care-text.svg" />
-          </div>
-          <p class="fs-5 text-center" style="letter-spacing: 2px">
-            无限便利<br />
-            <span class="me-1">Care+</span> <br />
-            家居护理和管理服务
-          </p>
-        </div>
-
-        <div class="col-md-4 d-flex flex-column gap-4 align-items-center">
-          <div class="h-[100px]">
-            <img alt="" src="./assets/perks/reward.svg" />
-          </div>
-          <div>
-            <img alt="" src="./assets/perks/reward-text.svg" />
-          </div>
-          <p class="fs-5 text-center" style="letter-spacing: 2px">
-            享受福利<br />
-            <span class="me-1">Reward+</span> <br />
-            购房回扣和奖励
-          </p>
-        </div>
-      </div>
-
+      <!-- Desktop button -->
       <a
         href="https://propertyplus.sunwayproperty.com/"
         target="_blank"
         rel="noopener noreferrer"
+        class="position-absolute bottom-0 start-50 translate-middle d-none d-md-block"
       >
         <button
           type="button"
-          class="btn-custom-orange rounded-5 btn-lg px-4 py-3 fs-5"
+          class="btn-custom-orange rounded-pill btn-lg px-5 py-3 fs-5"
+          style="min-width: 200px;"
         >
-          了解更多
+          Find Out More
+        </button>
+      </a>
+
+      <!-- Mobile button -->
+      <a
+        href="https://propertyplus.sunwayproperty.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="position-absolute bottom-0 start-50 translate-middle d-block d-md-none"
+        style="margin-bottom: -12px;"
+      >
+        <button
+          type="button"
+          class="btn-custom-orange rounded-pill px-3 py-1 fs-8"
+        >
+          Find Out More
         </button>
       </a>
     </section>
