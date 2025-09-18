@@ -75,11 +75,10 @@
   <header
     class="w-100 bg-[#2E565B] d-flex align-items-center justify-content-start h-[50px]"
   >
-    <!-- Responsive Navbar for smaller screens -->
+    <!-- Responsive/Mobile Navbar for smaller screens -->
     <nav class="navbar navbar-expand-lg d-lg-none bg-[#2E565B] w-100">
       <div class="container-fluid d-flex align-items-stretch">
         <!-- <a class="navbar-brand" href="#">  </a> -->
-
         <button
           class="navbar-toggler border-0 text-white"
           type="button"
@@ -124,16 +123,34 @@
               >
             </li>
 
-            <li class="nav-item">
-              <!-- 360 dropdown -->
-              <a href="360vr/360VR.html" class="nav-link text-white">
+            <li class="nav-item dropdown">
+              <a
+                href="#"
+                class="nav-link text-white d-flex align-items-center gap-2 dropdown-toggle"
+                id="dropdown360mobile"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
                 <img
                   src="./assets/icons/Union.png"
-                  alt="Home Logo"
+                  alt="360 Icon"
                   class="img-fluid"
-                  style="width: 30px"
+                  style="width: 22px"
                 />
+                <span> </span>
               </a>
+              <ul class="dropdown-menu bg-transparent border-0 shadow-none" aria-labelledby="dropdown360mobile">
+                <li>
+                  <a class="dropdown-item" target="_blank" href="360vr/360VR.html">Overview</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" target="_blank" href="serenevillasupper/tour.html">Upper Unit</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" target="_blank" href="serenevillaslower/tour.html">Lower Unit</a>
+                </li>
+              </ul>
             </li>
           </ul>
         </div>
