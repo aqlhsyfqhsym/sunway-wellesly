@@ -27,8 +27,8 @@ AOS.init({
 
   function downloadPDF() {
     const link = document.createElement("a");
-    link.href = "./assets/download/Sunway_Wellesley-Serene-Villas.pdf";
-    link.download = "Sunway_Wellesley-Serene-Villas.pdf";
+    link.href = "./assets/download/SWSV_e-Brochure.pdf";
+    link.download = "SWSV_e-Brochure.pdf";
 
     // Append the link to the body
     document.body.appendChild(link);
